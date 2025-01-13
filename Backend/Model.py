@@ -1,3 +1,5 @@
+# decides the type of query (general, realtime)
+
 # import required libraries
 import cohere # Import the Cohere library for AI services.
 from rich import print # Import the Rich library to enhance terminal outputs.
@@ -5,7 +7,7 @@ from dotenv import dotenv_values # Import dotenv to load environment variables f
 
 # Load environment variables from the .env file.
 env_vars = dotenv_values(".env")
-print(env_vars)
+# print(env_vars)
 
 # Retrieve API key.
 CohereAPIKey = env_vars.get("CohereAPIKey")
