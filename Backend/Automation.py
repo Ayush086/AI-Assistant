@@ -91,7 +91,7 @@ def Content(Topic):
     OpenNotepad(rf"Data\{Topic.lower().replace(' ', '')}.txt") # Open file in notepad
     return True # success indication
 
-# Content("leave letter to class teacher")
+# Content("write python code for basic calculations")
 
 #Function to search for a topic on YouTube.
 def YouTubeSearch(Topic):
@@ -148,7 +148,7 @@ def OpenApp(app, sess=requests.session()):
 # function to close application
 def CloseApp(app):
     if "chrome" in app:
-        return False  # Skip if the app is Chrome
+        return False  # Skip if the app is Chrome (because selenium needs chrome)
     try:
         close(app, match_closest=True, output=True, throw_error=True)
         return True
@@ -261,5 +261,5 @@ async def Automation(commands: list[str]):
     
     return True # indicates success   
             
-if __name__ == "__main__":
-    asyncio.run(Automation(["open whatsapp", "open instagram", "play attention song"]))
+# if __name__ == "__main__":
+#     asyncio.run(Automation(["open whatsapp", "open telegram", "play attention", "close whatsapp"]))
