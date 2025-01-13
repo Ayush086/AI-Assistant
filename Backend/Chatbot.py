@@ -1,3 +1,4 @@
+# to handle general queries
 import os
 from groq import Groq # Importing the Groq library to use its API.
 from json import load, dump # Importing functions to read and write JSON files.
@@ -5,7 +6,7 @@ import datetime # Importing the datetime module for real-time date and time info
 from dotenv import dotenv_values  # Importing dotenv_values to read environment variables from a .env file
 
 # Load environment variables from the .env file.
-env_vars = dotenv_values("../.env")
+env_vars = dotenv_values(os.path.join(os.getcwd(), ".env"))
 
 # Retrieve specific environment variables for username, assistant name, and API key.
 Username = env_vars.get("Username")
